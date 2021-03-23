@@ -8,13 +8,13 @@ This was our for first task and introduction into programming, scripting and Git
 
 The actions were as follows:
 1. I had to install the required software on my laptop
-        * Outcome : Installed Cmder, Notepadd ++, Anaconda (Python) and VScode installed
+    - Outcome : Installed Cmder, Notepadd ++, Anaconda (Python) and VScode installed
 2. Pull the sample code in Andrew's repository to my machine
-        * Outcome : Cloned andreawbeattycourse/pands2021 onto my machine
+    - Outcome : Cloned andreawbeattycourse/pands2021 onto my machine
 3. Create a GitHub account and repository
-        * Outcome : 'mywWork' repository created in my GitHub account
+    - Outcome : 'mywWork' repository created in my GitHub account
 4. Commit and push a file to new repository 
-        * Outcome : 'hello.py' file push to 'myWork' repository
+    - Outcome : 'hello.py' file push to 'myWork' repository
 
 
 *Weekly Task number 2:*
