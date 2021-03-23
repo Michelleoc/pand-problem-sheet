@@ -1,19 +1,19 @@
 # pand-problem-sheet
 
-#This readme file details the weekly tasks of the 2021 Programming and Scripting module
+**This readme file details the weekly tasks of the 2021 Programming and Scripting module**
 
 *Weekly Task number 1:*
 
 This was our for first task and introduction into programming, scripting and GitHub. 
 
 The actions were as follows:
-1.I had to install the required software on my laptop
+1. I had to install the required software on my laptop
         Outcome : Installed Cmder, Notepadd ++, Anaconda (Python) and VScode installed
-2.Pull the sample code in Andrew's repository to my machine
+2. Pull the sample code in Andrew's repository to my machine
         Outcome : Cloned andreawbeattycourse/pands2021 onto my machine
-3.Create a GitHub account and repository
+3. Create a GitHub account and repository
         Outcome : 'mywWork' repository created in my GitHub account
-4.Commit and push a file to new repository 
+4. Commit and push a file to new repository 
         Outcome : 'hello.py' file push to 'myWork' repository
 
 
