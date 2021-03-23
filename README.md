@@ -1,8 +1,9 @@
 # pand-problem-sheet
 
-**This readme file details the weekly tasks of the 2021 Programming and Scripting module**
+# This readme file details the weekly tasks of the 2021 Programming and Scripting module
 
 *Weekly Task number 1:*
+___
 
 This was our for first task and introduction into programming, scripting and GitHub. 
 
@@ -23,13 +24,15 @@ For the Statements topic in week 2, I had to write a program that calculates som
 * The inputs are the person's height in centimetres and weight in kilograms.
 * The output is their weight divided by their height in metres squared.
 
-I defined my inputs with the prefix of 'int' to ensure the number is a whole number
+I defined my inputs with the prefix of 'int' to ensure the number is a whole number.
  
-I referenced the below link for a BMI formula using centimetres in the calculation.
-BMI formula link: https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html
-The formula for BMI is weight in kilograms divided by height in meters squared. If height has been measured in centimeters, divide by 100 to convert this to meters
+I referenced the below link for a BMI formula using centimetres in the calculation.  
+BMI formula link: https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html  
+The formula for BMI is weight in kilograms divided by height in meters squared.  
+If height has been measured in centimeters, divide by 100 to convert this to meters
 
-To round the result to 2 decimal places I referenced w3schools https://www.w3schools.com/python/ref_func_round.asp
+To round the result to 2 decimal places I referenced w3schools  
+https://www.w3schools.com/python/ref_func_round.asp
 
 *Weekly Task number 3:*
 
