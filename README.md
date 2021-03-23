@@ -1,8 +1,8 @@
 # pand-problem-sheet
 
-This readme file details the weekly tasks of the 2021 Programming and Scripting module
+#This readme file details the weekly tasks of the 2021 Programming and Scripting module
 
-Weekly Task number 1:
+*Weekly Task number 1:*
 
 This was our for first task and introduction into programming, scripting and GitHub. 
 
@@ -17,7 +17,7 @@ The actions were as follows:
         Outcome : 'hello.py' file push to 'myWork' repository
 
 
-Weekly Task number 2:
+*Weekly Task number 2:*
 
 For the Statements topic in week 2, I had to write a program that calculates somebody's Body Mass Index (BMI). 
 The inputs are the person's height in centimetres and weight in kilograms.
@@ -31,7 +31,7 @@ The formula for BMI is weight in kilograms divided by height in meters squared. 
 
 To round the result to 2 decimal places I referenced w3schools https://www.w3schools.com/python/ref_func_round.asp
 
-Weekly Task number 3:
+*Weekly Task number 3:*
 
 For the Variables topic in week 3, I had to write a program that asks a user to input a string and outputs every second letter in reverse order.
 
