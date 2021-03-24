@@ -11,12 +11,13 @@ The actions were as follows:
 2. Pull the sample code in Andrew's repository to my machine
     - Outcome : Cloned andreawbeattycourse/pands2021 onto my machine
 3. Create a GitHub account and repository
-    - Outcome : 'mywWork' repository created in my GitHub account
+    - Outcome : 'myWork' repository created in my GitHub account
 4. Commit and push a file to new repository 
     - Outcome : 'hello.py' file push to 'myWork' repository
 
 
-*Weekly Task number 2:*
+**_Weekly Task number 2:_**
+_ _ _ 
 
 For the Statements topic in week 2, I had to write a program that calculates somebody's Body Mass Index (BMI). 
 * The inputs are the person's height in centimetres and weight in kilograms.
@@ -32,7 +33,8 @@ If height has been measured in centimeters, divide by 100 to convert this to met
 To round the result to 2 decimal places I referenced w3schools  
 https://www.w3schools.com/python/ref_func_round.asp
 
-*Weekly Task number 3:*
+**_Weekly Task number 3:_**
+_ _ _ 
 
 For the Variables topic in week 3, I had to write a program that asks a user to input a string and outputs every second letter in reverse order.
 
