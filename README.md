@@ -58,25 +58,30 @@ Researching on the stackoverflow, there was a link about extended slices on docs
 **_Weekly Task number 5:_**
 _ _ _ 
 
-For the Data topic in week 5, I had to write a program that outputs whether or not today is a weekday.
-We had to search the web to find how you work out what day it is
+For the Data topic in week 5, I had to write a program that outputs whether or not today is a weekday.  
+We had to search the web to find how you work out what day it is.  
+
 An example of running this program on a Thursday is as follows:  
     Yes, unfortunately today is a weekday.
 
 An example of running it on a Saturday is as follows:  
     It is the weekend, yay!
 
-Date in Python is not a data type of its own. We must import a module name __datetime__ to work with dates as date objects
-    https://www.w3schools.com/python/python_datetime.asp
+Date in Python is not a data type of its own.  
+We must import a module name __datetime__ to work with dates as date objects
+
+    https://www.w3schools.com/python/python_datetime.asp  
     https://www.pythonprogramming.in/get-the-day-of-week-from-given-a-date-in-python.html
 
-Calling datatime.datetime.today() returns a datetime object of today
+Calling datatime.datetime.today() returns a datetime object of today  
+
     Automate the boring stuff with python - The datatime Module
 
-To format the output of the date we use strftime Method  
-strftime is a method for formatting date objects into readable strings  
-It takes one parameter, format, to specify the format of the returned string  
-%A is full weekday name format, e.g. Wednesday  
+To format the output of the date we use strftime Method.  
+strftime is a method for formatting date objects into readable strings.  
+It takes one parameter, format, to specify the format of the returned string.     
+    %A is full weekday name format, e.g. Wednesday  
+
     Automate the boring stuff with python - Converting datetime Objects into Strings  
 
 
