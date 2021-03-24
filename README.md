@@ -3,7 +3,7 @@
 # This readme file details the weekly tasks of the 2021 Programming and Scripting module
 
 *Weekly Task number 1:*
-___
+_ _ _ 
 
 This was our for first task and introduction into programming, scripting and GitHub. 
 
