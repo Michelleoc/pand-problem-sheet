@@ -40,5 +40,18 @@ For the Variables topic in week 3, I had to write a program that asks a user to 
 
 String input is "The quick brown fox jumps over the lazy dog"
 
-stackoverflow https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python
+Defined the input with the prefix of 'str' to ensure string format
+words = str(input("Please enter a sentence : "))
+
+To reverse the order of the input use [::-1]
+
+    https://www.w3schools.com/python/python_howto_reverse_string.asp
+
+To get every 2nd letter use [::2]
+
+Researching on the stackoverflow link, there was a link about extended slices on docs.python page where it showed how to get every 2nd letter of input   
+
+    https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python   
+    https://docs.python.org/2/whatsnew/2.3.html#extended-slices   
+
 
