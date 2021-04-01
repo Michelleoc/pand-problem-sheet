@@ -55,11 +55,30 @@ Researching on the stackoverflow, there was a link about extended slices on docs
     https://docs.python.org/2/whatsnew/2.3.html#extended-slices   
 
 
+**_Weekly Task number 4:_**
+_ _ _ 
+
+For Controlling the flow topic in week 4, I had to write a program that asks the user to input any positive integer and outputs the successive values of the following calculation.  
+At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one.  
+Have the program end if the current value is one.  
+
+The basis of the program is a while statement. 
+The while statement allows a block of code to be execute over and over again as long as the while statement’s condition is True.   
+        
+        Automate the boring stuff with python - Flow control - while Loop Statements
+
+
+
+
+
+
+
+
+
 **_Weekly Task number 5:_**
 _ _ _ 
 
 For the Data topic in week 5, I had to write a program that outputs whether or not today is a weekday.  
-We had to search the web to find how you work out what day it is.  
 
 An example of running this program on a Thursday is as follows:  
     Yes, unfortunately today is a weekday.

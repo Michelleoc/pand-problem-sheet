@@ -9,5 +9,3 @@ words = str(input("Please enter a sentence : "))
 # To get every 2nd letter use [::2]
 
 print (words [::-1][::2])
-
-
