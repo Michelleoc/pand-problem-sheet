@@ -52,7 +52,7 @@ def squareRoot(n, l) :
 	return root
 
 
-print (squareRoot(n, l))
+print ("The square root of 14.5 is approx", round(squareRoot(n, l),1))
 
 # https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
 # https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo
