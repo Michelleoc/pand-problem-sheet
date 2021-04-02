@@ -14,8 +14,8 @@ l = "e"
 
 # https://www.sanfoundry.com/python-program-read-file-counts-number/
 
-# k is our counter
-k = 0 
+# c is our counter
+c = 0 
 
 # Open the file in read text mode using rt
 with open(filename, "rt") as f:
@@ -32,10 +32,9 @@ with open(filename, "rt") as f:
             for letter in i:
                 # If the letter equals our input "l" then the letter count is incremented 
                 if(letter==l):
-                    k=k+1
+                    c=c+1
                     
-print("Occurrences of the letter:")
-print(k)
+print("Occurrences of the letter:", c)
 
 # https://www.sanfoundry.com/python-program-read-file-counts-number/
 # https://stackoverflow.com/questions/14067267/lower-case-from-a-text-file

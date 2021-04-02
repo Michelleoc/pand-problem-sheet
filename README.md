@@ -126,13 +126,14 @@ _ _ _
 
 For the Data topic in week 5, the task was to write a program that outputs whether or not today is a weekday.  
 
-No user input required.  
+* No user input required.  
 
-An example of running this program on a Thursday is as follows:  
-    Yes, unfortunately today is a weekday.
-
-An example of running it on a Saturday is as follows:  
-    It is the weekend, yay!
+* Output  
+    An example of running this program on a Thursday is as follows:  
+    - Yes, unfortunately today is a weekday. 
+ 
+    An example of running it on a Saturday is as follows:  
+    - It is the weekend, yay!
 
 
 Code:   
@@ -168,3 +169,138 @@ References:
 3. Automate the boring stuff with python - Converting datetime Objects into Strings  
 4. Automate the boring stuff with python - The datatime Module
 
+
+**_Weekly Task number 6:_**
+_ _ _ 
+
+For the Functions topic in week 6, the task was to write a program that takes a positive floating-point number as input and outputs an approximation of its square root. 
+
+* Input is prompting the user to enter a positive number, in this task it is 14.5  
+
+* Output is The square root of 14.5 is approx. 3.8.
+
+
+Code:   
+
+    n = float(input("Please enter a positive number: "))
+    l = 0.00001
+    def squareRoot(n, l) :
+	x = n
+	count = 0
+	while (1) :
+		count += 1
+		root = 0.5 * (x + (n / x))
+		if (abs(root - x) < l) :
+			break
+		x = root
+	return root
+    print ("The square root of 14.5 is approx", round(squareRoot(n, l),1))
+
+Code Explanation: 
+
+Defined my inputs with the prefix of 'float' to ensure the number is a real number.  
+l is the tolerance level on the iteration change.  We will continue the formula calculation until we the iteration change is less than 0.00001  
+Assuming the sqrt of n as n only  
+To count the number of iterations  
+Since we don't know the number of iterations it will take us, we need to use a while loop  
+Newton method square root formula calculation = root = 0.5 * (x + (n / x))  
+Check for closeness to the tolerance level I set. abs used to return absolute value. On the first iteration 7.75-14.5 is not less than 1.  
+If the result of the above formula is less than one, we continue and make x equal to the root and loop back to the start of the while function
+
+References:  
+
+    https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
+    https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo
+    https://stackoverflow.com/questions/55232484/newtons-method-for-approximating-square-roots
+
+
+**_Weekly Task number 7:_**
+_ _ _ 
+
+For the Files topic in week 7, the task was to write a program that reads in a text file "moby-dick.txt" and outputs the number of e's it contains.  
+The program should take the filename from an argument on the command line.
+
+
+
+
+Code:   
+
+    filename = "moby-dick.txt"
+    l = "e"
+    c = 0 
+    with open(filename, "rt") as f:
+        for line in f:
+            line = line.lower()
+            words = line.split()
+            for i in words:
+                for letter in i:
+                    if(letter==l):
+                        c=c+1
+    print("Occurrences of the letter:", c)
+
+
+Code Explanation:   
+
+List the source filename to read in, in this task it is "moby-dick.txt".  
+Identify the letter to check using l = "e"  
+An alternative would be to ask the user to input their desired letter to check as follows:   
+l=input("Enter letter to be searched:")
+
+Start a counter with zero  
+
+Open the file in read text mode using rt "with open(filename, "rt") as f:"  
+A for loop is used to read through each line in the file "for line in f:"  
+
+I am working on the assumption that they want Upper and Lower case of the letter e, so I convert upper to lower case using "line = line.lower()"  
+Each line is split into a list of words using split (), "words = line.split()"  
+A loop is used to work through the words and another loop to work through the letters in the word.  
+If the letter equals our input "l" then the letter count is incremented 
+
+References:  
+
+    https://www.sanfoundry.com/python-program-read-file-counts-number/  
+    https://stackoverflow.com/questions/14067267/lower-case-from-a-text-file  
+    https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
+    https://stackoverflow.com/questions/36726767/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python
+
+
+
+**_Weekly Task number 8:_**
+_ _ _ 
+
+For the Looking ahead topic in week 8, the task was to write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.  
+
+
+Code:   
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    x = np.array([0,4])
+    f =x
+    g =x**2
+    h =x**3
+    plt.plot(f, 'r') # red line
+    plt.plot(g, 'b') # blue line
+    plt.plot(h, 'g') # green line
+    plt.plot(title = "Function Plot",
+       xlabel = "X Axis", 
+       ylabel = "Y Axis")
+    plt.legend(['f(x)=x', 'g(x)=x2', 'h(x)=x3'])
+    plt.savefig("Weekly_Task_Plot.png")
+    plt.show()
+
+Code Explanation:   
+Imported numpy and matplotlib.  
+Passed array in similar to how we did in the week 08 lectures  
+Inserted functions as outlined in the task requirements, using **2 for squared (4*4) and # using **3 for cubed (4*4*4). 
+Plotting f, g & h functions separately
+formatting the plot 
+passing the legend names in a list
+
+References:  
+
+    https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-with-matplotlib/introduction-to-matplotlib-plots/customize-plot-colors-labels-matplotlib/
+    https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+    https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html
+    https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html
+    https://stackoverflow.com/questions/22276066/how-to-plot-multiple-functions-on-the-same-figure-in-matplotlib
