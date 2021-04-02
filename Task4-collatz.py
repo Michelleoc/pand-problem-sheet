@@ -1,3 +1,4 @@
+# Topic 'Controlling the flow' - Weekly Task 04
 # A program that asks a user to input any positive integer and outputs the successive values of the following calculation
 # At each step, calculate the next value by taking the current value and if it is even, divide by two but if it is odd, multiply it by three and add one
 # The program will end of the current value is one

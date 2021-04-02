@@ -1,4 +1,4 @@
-# Weekly Task 6
+# Topic 'Functions' - Weekly Task 06
 # Take a positive floating point number as the input and output an approximation of its square root
 # Author : Michelle O'Connor
 
@@ -56,5 +56,6 @@ print (squareRoot(n, l))
 
 # https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
 # https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo
+# https://stackoverflow.com/questions/55232484/newtons-method-for-approximating-square-roots
 
 
