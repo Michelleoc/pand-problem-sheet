@@ -49,10 +49,10 @@ The output requirement was to be in 2 decimal places so used the round(x,2) to a
 
 
 References:  
-1. BMI formula using centimetres 
+    
+    1. BMI formula using centimetres 
   https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html  
-
-2. To round the result to 2 decimal places I referenced w3schools  
+    2. To round the result to 2 decimal places I referenced w3schools  
 https://www.w3schools.com/python/ref_func_round.asp   
   
    
@@ -74,8 +74,9 @@ To reverse the order of the input used [::-1] as outlined on w3schools.
 In order to get every 2nd letter use [::2] as outlined on stackoverflow and docs.python.org.  
 
 References:
-1. https://www.w3schools.com/python/python_howto_reverse_string.asp
-2. https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python   
+
+    1. https://www.w3schools.com/python/python_howto_reverse_string.asp
+    2. https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python   
     https://docs.python.org/2/whatsnew/2.3.html#extended-slices   
 
 
@@ -164,10 +165,11 @@ It takes one parameter, format, to specify the format of the returned string, %A
 
 
 References:
-1. https://www.w3schools.com/python/python_datetime.asp
-2. https://www.pythonprogramming.in/get-the-day-of-week-from-given-a-date-in-python.html
-3. Automate the boring stuff with python - Converting datetime Objects into Strings  
-4. Automate the boring stuff with python - The datatime Module
+
+    1. https://www.w3schools.com/python/python_datetime.asp
+    2. https://www.pythonprogramming.in/get-the-day-of-week-from-given-a-date-in-python.html
+    3. Automate the boring stuff with python - Converting datetime Objects into Strings  
+    4. Automate the boring stuff with python - The datatime Module
 
 
 **_Weekly Task number 6:_**
