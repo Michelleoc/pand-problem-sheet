@@ -50,10 +50,8 @@ The output requirement was to be in 2 decimal places so used the round(x,2) to a
 
 References:  
     
-    1. BMI formula using centimetres 
-  https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html  
-    2. To round the result to 2 decimal places I referenced w3schools  
-https://www.w3schools.com/python/ref_func_round.asp   
+    https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html  
+    https://www.w3schools.com/python/ref_func_round.asp   
   
    
 **_Weekly Task number 3:_**
@@ -66,17 +64,19 @@ For the Variables topic in week 3, the task was to write a program that asks a u
 Code: 
 
     words = str(input("Please enter a sentence : "))
-    print (words [::-1][::2])
-
+    print(words [::-2])
+    
 Code Explanation:  
 Defined the input with the prefix of 'str' to ensure string format  
 To reverse the order of the input used [::-1] as outlined on w3schools.  
 In order to get every 2nd letter use [::2] as outlined on stackoverflow and docs.python.org.  
+Originally had "__print (words [::-1][::2])__" as the code, but knowing this could have been done with one [ ], I tried multiple verisons to get the desired result. 
+[::-] reverses the input and [::2] takes every 2nd ouput so combining these 2 commands into [::-2] gives every second letter in reverse.
 
 References:
 
-    1. https://www.w3schools.com/python/python_howto_reverse_string.asp
-    2. https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python   
+    https://www.w3schools.com/python/python_howto_reverse_string.asp
+    https://stackoverflow.com/questions/33470227/how-do-i-reverse-the-letters-in-a-string-in-python   
     https://docs.python.org/2/whatsnew/2.3.html#extended-slices   
 
 

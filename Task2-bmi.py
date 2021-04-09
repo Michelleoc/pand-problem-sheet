@@ -13,3 +13,11 @@ HeightinM2 = (Height/100 * Height/100)
 BMI = round((Weight / HeightinM2),2)
 
 print ('Your BMI is {}' .format(BMI))
+
+
+# References
+# 1. BMI formula using centimetres 
+# https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html  
+# 2. To round the result to 2 decimal places I referenced w3schools  
+# https://www.w3schools.com/python/ref_func_round.asp   
+  
