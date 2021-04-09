@@ -24,7 +24,8 @@ with open(filename, "rt") as f:
         # I am working on the assumption that they want Upper and Lower case of the letter e
         # So I convert upper to lower case 
         # https://stackoverflow.com/questions/14067267/lower-case-from-a-text-file
-        line = line.lower()
+        # line = line.lower()
+        # Removed this line as result of 116960 is only counting lower e's
         # Each line is split into a list of words using split ()
         words = line.split()
         # A loop is used to work through the words and another loop to work through the letters in the word
