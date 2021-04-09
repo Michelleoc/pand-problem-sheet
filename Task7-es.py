@@ -3,8 +3,8 @@
 # The program should take the filename from an argument on the command line
 # Author : Michelle O'Connor
 
-# List the source file
-filename = "moby-dick.txt"
+# Allow for input of filename from an argument on the command line
+filename = input("Enter file name : ")
 
 # Task lists e as the letter to check for 
 l = "e"
@@ -27,7 +27,7 @@ with open(filename, "rt") as f:
         line = line.lower()
         # Each line is split into a list of words using split ()
         words = line.split()
-        # A loop is used to work through the words and another loop to woek through the letters in the word
+        # A loop is used to work through the words and another loop to work through the letters in the word
         for i in words:
             for letter in i:
                 # If the letter equals our input "l" then the letter count is incremented 
@@ -40,3 +40,7 @@ print("Occurrences of the letter:", c)
 # https://stackoverflow.com/questions/14067267/lower-case-from-a-text-file
 # https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
 # https://stackoverflow.com/questions/36726767/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python
+# https://stackoverflow.com/questions/7033987/python-get-files-from-command-line
+# https://docs.python.org/3/library/fileinput.html
+
+

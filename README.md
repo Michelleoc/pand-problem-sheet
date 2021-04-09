@@ -70,7 +70,8 @@ Code Explanation:
 Defined the input with the prefix of 'str' to ensure string format  
 To reverse the order of the input used [::-1] as outlined on w3schools.  
 In order to get every 2nd letter use [::2] as outlined on stackoverflow and docs.python.org.  
-Originally had "__print (words [::-1][::2])__" as the code, but knowing this could have been done with one [ ], I tried multiple verisons to get the desired result. 
+
+Originally had "__print (words [::-1][::2])__" as the code, but knowing this could have been done with one [ ], I tried multiple verisons to get the desired result.   
 [::-] reverses the input and [::2] takes every 2nd ouput so combining these 2 commands into [::-2] gives every second letter in reverse.
 
 References:
@@ -112,14 +113,18 @@ The basis of the program is a while statement. While statements are used when yo
 The while statement allows a block of code to be executed over and over again as long as the while statement’s condition is True.  
 Therfore where the output of the calculation is greater than 1 for each run of the code (while number != 1), we want the output to be added to the list (mylist.append(number)) and used as the input for the next run of the code.  
 
-For even numbers (if (number % 2) == 0), we need to divide by 2.  
-For all other numbers (use else), we multiply it by three and add one
+For even numbers (if (number % 2) == 0), we need to divide by 2 and add output to the list.  
+For all other numbers (use else), we multiply it by three and add one and add output to the list.  
+
+If the output is great than 1,the while statement will restart again.    
+
 
 References:  
 
         Automate the boring stuff with python - Flow control - while Loop Statements
-
-
+        https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff
+        https://www.geeksforgeeks.org/program-to-print-collatz-sequence/
+        
 
 
 **_Weekly Task number 5:_**
@@ -152,24 +157,22 @@ Code Explanation:
 
 Date in Python is not a data type of its own.  
 We must import a module name __datetime__ to work with dates as date objects.  
-Entered a definition of weekeday. 
+
+Entered a definition of weekday. 
 
 Entering datatime.datetime.today() returns a datetime object of today.  
 To format the output of the date we use strftime Method.  
 strftime is a method for formatting date objects into readable strings.  
 It takes one parameter, format, to specify the format of the returned string, %A is full weekday name format, e.g. Wednesday   
 
-    Automate the boring stuff with python - The datatime Module
-
-    Automate the boring stuff with python - Converting datetime Objects into Strings  
-
+I used an if statement to define the outcome if true and then used an else condition to show the outcome of the if statement when it is false, i.e not a weekday.
 
 References:
 
-    1. https://www.w3schools.com/python/python_datetime.asp
-    2. https://www.pythonprogramming.in/get-the-day-of-week-from-given-a-date-in-python.html
-    3. Automate the boring stuff with python - Converting datetime Objects into Strings  
-    4. Automate the boring stuff with python - The datatime Module
+    https://www.w3schools.com/python/python_datetime.asp
+    https://www.pythonprogramming.in/get-the-day-of-week-from-given-a-date-in-python.html
+    Automate the boring stuff with python - Converting datetime Objects into Strings  
+    Automate the boring stuff with python - The datatime Module
 
 
 **_Weekly Task number 6:_**
@@ -227,7 +230,7 @@ The program should take the filename from an argument on the command line.
 
 Code:   
 
-    filename = "moby-dick.txt"
+    filename = input("Enter file name : ")
     l = "e"
     c = 0 
     with open(filename, "rt") as f:
@@ -243,18 +246,20 @@ Code:
 
 Code Explanation:   
 
-List the source filename to read in, in this task it is "moby-dick.txt".  
+I had to allow for input of filename from an argument on the command line, in this task it is "moby-dick.txt".  
 Identify the letter to check using l = "e"  
 An alternative would be to ask the user to input their desired letter to check as follows:   
 l=input("Enter letter to be searched:")
 
 Start a counter with zero  
 
-Open the file in read text mode using rt "with open(filename, "rt") as f:"  
+Open the file in read text mode using rt "with open(filename, "rt") as f:"
+
 A for loop is used to read through each line in the file "for line in f:"  
 
 I am working on the assumption that they want Upper and Lower case of the letter e, so I convert upper to lower case using "line = line.lower()"  
 Each line is split into a list of words using split (), "words = line.split()"  
+
 A loop is used to work through the words and another loop to work through the letters in the word.  
 If the letter equals our input "l" then the letter count is incremented 
 
@@ -264,7 +269,8 @@ References:
     https://stackoverflow.com/questions/14067267/lower-case-from-a-text-file  
     https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
     https://stackoverflow.com/questions/36726767/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python
-
+    https://stackoverflow.com/questions/7033987/python-get-files-from-command-line
+    https://docs.python.org/3/library/fileinput.html
 
 
 **_Weekly Task number 8:_**

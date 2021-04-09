@@ -5,8 +5,6 @@
 
 # Author : Michelle O'Connor
 
-# REFERENCES TO BE ADDED
-
 # numberToEnd = 1
 
 # Defined the input with the prefix of 'int' to ensure the number is a whole number
@@ -21,17 +19,19 @@ mylist = []
 
 mylist.append(number)
 while number != 1:
-    if (number % 2) == 0:
-        number = (number//2)
-        mylist.append(number)
-        # if the number is even divide by 2
-        # add output to the list
+    if (number % 2) == 0: # checking for an even number
+        number = (number//2)  # if the number is even divide by 2
+        mylist.append(number)  # add output to the list
+        
     else:
-        number = int(3*number +1)
-        mylist.append(number)
-        # if the number is not even (i.e odd) muliple by 3 and add one
-        # add output to the list
+        number = int(3*number +1) # if the number is not even (i.e odd) muliple by 3 and add one
+        mylist.append(number) # add output to the list
+        
+# if the output is great than 1,the while statement will restart again     
 
 print (mylist)
 
+
+# https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff
+# https://www.geeksforgeeks.org/program-to-print-collatz-sequence/
 
