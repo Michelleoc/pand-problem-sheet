@@ -71,7 +71,7 @@ Defined the input with the prefix of 'str' to ensure string format
 To reverse the order of the input used [::-1] as outlined on w3schools.  
 In order to get every 2nd letter use [::2] as outlined on stackoverflow and docs.python.org.  
 
-Originally had "__print (words [::-1][::2])__" as the code, but knowing this could have been done with one [ ], I tried multiple verisons to get the desired result.   
+Originally had "__print (words [::-1][::2])__" as the code, but it was highligthed to me this could have been done with one [ ], I tried multiple verisons to get the desired result of [::-2].    
 [::-] reverses the input and [::2] takes every 2nd ouput so combining these 2 commands into [::-2] gives every second letter in reverse.
 
 References:
@@ -182,41 +182,55 @@ For the Functions topic in week 6, the task was to write a program that takes a 
 
 * Input is prompting the user to enter a positive number, in this task it is 14.5  
 
-* Output is The square root of 14.5 is approx. 3.8.
+* Output is The square root of 14.5 is approx. 3.8.  
 
+Researched Newton raphson method, which is a way to quickly find an approximation of the square root value based upon a defined value of precision. 
+Newton method square root formula calculation is root = (x + (n / x)) * 0.5  
 
 Code:   
 
-    n = float(input("Please enter a positive number: "))
-    l = 0.00001
-    def squareRoot(n, l) :
-	x = n
+    number = float(input("Please enter a positive number: "))
+    toleranceLevel = 0.1
+    def squareRoot(number, toleranceLevel) :
+	x = number
 	count = 0
 	while (1) :
 		count += 1
-		root = 0.5 * (x + (n / x))
-		if (abs(root - x) < l) :
+		root = (x + (number / x)) * 0.5
+		if (abs(root - x) < toleranceLevel) :
 			break
 		x = root
 	return root
-    print ("The square root of 14.5 is approx", round(squareRoot(n, l),1))
+    print ("The square root of 14.5 is approx", round(squareRoot(number, toleranceLevel),1))
 
 Code Explanation: 
 
 Defined my inputs with the prefix of 'float' to ensure the number is a real number.  
-l is the tolerance level on the iteration change.  We will continue the formula calculation until we the iteration change is less than 0.00001  
-Assuming the sqrt of n as n only  
-To count the number of iterations  
-Since we don't know the number of iterations it will take us, we need to use a while loop  
-Newton method square root formula calculation = root = 0.5 * (x + (n / x))  
-Check for closeness to the tolerance level I set. abs used to return absolute value. On the first iteration 7.75-14.5 is not less than 1.  
-If the result of the above formula is less than one, we continue and make x equal to the root and loop back to the start of the while function
+I set a tolerance level on the iteration change to 0.1.  
+The program will continue the formula calculation until the iteration change is less than what I set the tolerance level to be.
+
+For the first calculation of the formula, __r = x + (n / x) * 0.5__ , x and n must equal each other. 
+
+Since we don't know the number of iterations it will take us, we need to use a while loop. 
+
+After the first formula calculation, we check if the iteration change (root minus x) is less than the tolerance level I set.  
+I used 'abs' to return absolute value.  
+
+On the first iteration, the absolute value of iteration change 6.75 (7.75-14.5) is greater than my tolerance level of 0.1. 
+Therefore the result is false and I need to continue the while loop.  I make x equal to the root and loop back to the start of the while function.
+
+When the absolute value of the iteration change is less than my tolerance level of 0.01, we break the while loop and return the square root. 
+
+Finally I round the square root to 1 decimal place as per the expected result.  
 
 References:  
 
     https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
     https://hackernoon.com/calculating-the-square-root-of-a-number-using-the-newton-raphson-method-a-how-to-guide-yr4e32zo
     https://stackoverflow.com/questions/55232484/newtons-method-for-approximating-square-roots
+    https://en.wikipedia.org/wiki/Newton%27s_method
+    https://www.youtube.com/watch?v=-5e2cULI3H8
+    https://surajregmi.medium.com/how-to-calculate-the-square-root-of-a-number-newton-raphson-method-f8007714f64
 
 
 **_Weekly Task number 7:_**
@@ -225,8 +239,9 @@ _ _ _
 For the Files topic in week 7, the task was to write a program that reads in a text file "moby-dick.txt" and outputs the number of e's it contains.  
 The program should take the filename from an argument on the command line.
 
+* Input is moby-dick.txt
 
-
+* Output is 116960  
 
 Code:   
 
@@ -235,7 +250,6 @@ Code:
     c = 0 
     with open(filename, "rt") as f:
         for line in f:
-            line = line.lower()
             words = line.split()
             for i in words:
                 for letter in i:
@@ -247,21 +261,22 @@ Code:
 Code Explanation:   
 
 I had to allow for input of filename from an argument on the command line, in this task it is "moby-dick.txt".  
-Identify the letter to check using l = "e"  
-An alternative would be to ask the user to input their desired letter to check as follows:   
-l=input("Enter letter to be searched:")
+Identify the letter to check using l = "e".  
+An alternative would be to ask the user to input their desired letter to check **l=input("Enter letter to be searched:")**. 
 
-Start a counter with zero  
+Start a counter with zero, c=0.  
 
 Open the file in read text mode using rt "with open(filename, "rt") as f:"
 
 A for loop is used to read through each line in the file "for line in f:"  
 
-I am working on the assumption that they want Upper and Lower case of the letter e, so I convert upper to lower case using "line = line.lower()"  
+I intially had code in to convert all upper case to lower case **line = line.lower()**.    
+However after running the program, my output didn't match the expected output of 116960.   
+Running the program just counting the lower case of the letter e gives the expected output of 116960.
+  
 Each line is split into a list of words using split (), "words = line.split()"  
-
 A loop is used to work through the words and another loop to work through the letters in the word.  
-If the letter equals our input "l" then the letter count is incremented 
+If the letter equals our input letter of "e" then the letter count is increased by one.  
 
 References:  
 
@@ -270,7 +285,9 @@ References:
     https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
     https://stackoverflow.com/questions/36726767/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python
     https://stackoverflow.com/questions/7033987/python-get-files-from-command-line
-    https://docs.python.org/3/library/fileinput.html
+    https://docs.python.org/3/library/fileinput.html  
+    https://www.w3schools.com/python/ref_string_split.asp
+    
 
 
 **_Weekly Task number 8:_**
