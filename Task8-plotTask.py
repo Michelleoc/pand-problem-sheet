@@ -5,10 +5,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Passed array in similar to how we did in the week 08 lectures
-x = np.array([0,4])
+# All the below represent ways to pass in the range [0,4]
+# https://realpython.com/how-to-use-numpy-arange/
 
-# insert functions as outlined in the task 
+x = np.array([0,1,2,3,4]) 
+# x = np.arange(5, dtype=int)
+# x = np.arange(0,5) # returns 0,1,2,3,4
+
+# Inserted functions as outlined in the task 
 # using **2 for squared 4*4
 # using **3 for cubed 4*4*4
 f =x
@@ -25,19 +29,26 @@ plt.plot(h, 'g') # green line
 # https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-with-matplotlib/introduction-to-matplotlib-plots/customize-plot-colors-labels-matplotlib/
 # https://matplotlib.org/stable/tutorials/introductory/pyplot.html
 
-plt.plot(title = "Function Plot",
-       xlabel = "X Axis", 
-       ylabel = "Y Axis")
-
-# passing the legend names in a list
+# putting the legend names in a list
 # https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html
+# location of the legend
+# https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+# creating a grid effect
+# https://matplotlib.org/2.0.2/api/pyplot_api.html
 
-plt.legend(['f(x)=x', 'g(x)=x2', 'h(x)=x3'])
 
+plt.legend(['f(x)=x', 'g(x)=x2', 'h(x)=x3'], loc=0)
+plt.title("Function Plot")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.grid(True)
+
+# saving the plot as a png file
 plt.savefig("Weekly_Task_Plot.png")
 
+# Displaying the plot
 plt.show()
 
 
 # https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html
-# https://stackoverflow.com/questions/22276066/how-to-plot-multiple-functions-on-the-same-figure-in-matplotlib
+

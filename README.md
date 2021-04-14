@@ -217,9 +217,9 @@ After the first formula calculation, we check if the iteration change (root minu
 I used 'abs' to return absolute value.  
 
 On the first iteration, the absolute value of iteration change 6.75 (7.75-14.5) is greater than my tolerance level of 0.1. 
-Therefore the result is false and I need to continue the while loop.  I make x equal to the root and loop back to the start of the while function.
+Therefore the result is false and the while loop will continue.  I make x equal to the root and loop back to the start of the while function.
 
-When the absolute value of the iteration change is less than my tolerance level of 0.01, we break the while loop and return the square root. 
+When the absolute value of the iteration change is less than my tolerance level of 0.01, the while loop will break and return the square root. 
 
 Finally I round the square root to 1 decimal place as per the expected result.  
 
@@ -295,37 +295,58 @@ _ _ _
 
 For the Looking ahead topic in week 8, the task was to write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.  
 
+* Input  
+    f(x)=x  
+    g(x)=x2  
+    h(x)=x3
+
+* Output is to display and save the plot    
 
 Code:   
 
     import numpy as np
     import matplotlib.pyplot as plt
-    x = np.array([0,4])
+    x = np.array([0,1,2,3,4]) 
     f =x
     g =x**2
     h =x**3
     plt.plot(f, 'r') # red line
     plt.plot(g, 'b') # blue line
     plt.plot(h, 'g') # green line
-    plt.plot(title = "Function Plot",
-       xlabel = "X Axis", 
-       ylabel = "Y Axis")
-    plt.legend(['f(x)=x', 'g(x)=x2', 'h(x)=x3'])
+    plt.legend(['f(x)=x', 'g(x)=x2', 'h(x)=x3'], loc=0)
+    plt.title("Function Plot")
+    plt.xlabel("X Axis")
+    plt.ylabel("Y Axis")
+    plt.grid(True)
     plt.savefig("Weekly_Task_Plot.png")
     plt.show()
 
 Code Explanation:   
-Imported numpy and matplotlib.  
-Passed array in similar to how we did in the week 08 lectures  
-Inserted functions as outlined in the task requirements, using **2 for squared (4*4) and # using **3 for cubed (4*4*4). 
-Plotting f, g & h functions separately
-formatting the plot 
-passing the legend names in a list
+Imported numpy (for array computing) and matplotlib (for creating the plots showing the results).  
+
+Researched how-to-use-numpy-arange on real python to understand how to pass in a range.   
+Each of the following pass in the range [0,4]   
+    x = np.array([0,1,2,3,4])   
+    x = np.arange(5, dtype=int)   
+    x = np.arange(0,5) # returns 0,1,2,3,4  
+
+Inserted functions as outlined in the task requirements, using **2 for squared (4 x 4) and using **3 for cubed (4 x 4 x 4).  
+Plotted f, g & h functions separately but on the same axis. 
+
+Applied the following formats after researching on mayplotlib.org   
+1. Added Title name   
+2. Added X and Y titles  
+3. Added legend (passing the names in as a list)  
+4. Added Grid effect  
+
+The final setep was to save the plot as a png file (Weekly_Task_Plot.png) and also get the program to display the output.   
 
 References:  
 
-    https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-with-matplotlib/introduction-to-matplotlib-plots/customize-plot-colors-labels-matplotlib/
-    https://matplotlib.org/stable/tutorials/introductory/pyplot.html
-    https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html
-    https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html
+    https://realpython.com/how-to-use-numpy-arange/
     https://stackoverflow.com/questions/22276066/how-to-plot-multiple-functions-on-the-same-figure-in-matplotlib
+    https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-with-matplotlib/introduction-to-matplotlib-plots/customize-plot-colors-labels-matplotlib/
+    https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html
+    https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+    https://matplotlib.org/2.0.2/api/pyplot_api.html
+    https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html
