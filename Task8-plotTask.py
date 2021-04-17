@@ -5,7 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# All the below represent ways to pass in the range [0,4]
+# The below 3 lines represent ways to pass in the range [0,4]
 # https://realpython.com/how-to-use-numpy-arange/
 
 x = np.array([0,1,2,3,4]) 

@@ -71,7 +71,8 @@ Defined the input with the prefix of 'str' to ensure string format
 To reverse the order of the input used [::-1] as outlined on w3schools.  
 In order to get every 2nd letter use [::2] as outlined on stackoverflow and docs.python.org.  
 
-Originally had "__print (words [::-1][::2])__" as the code, but it was highligthed to me this could have been done with one [ ], I tried multiple verisons to get the desired result of [::-2].    
+Originally had "__print (words [::-1][::2])__" as the code, but it was highligthed to me this could have been done   
+with one [ ], I tried multiple verisons to get the desired result of [::-2].    
 [::-] reverses the input and [::2] takes every 2nd ouput so combining these 2 commands into [::-2] gives every second letter in reverse.
 
 References:
@@ -221,7 +222,7 @@ Therefore the result is false and the while loop will continue.  I make x equal 
 
 When the absolute value of the iteration change is less than my tolerance level of 0.01, the while loop will break and return the square root. 
 
-Finally I round the square root to 1 decimal place as per the expected result.  
+Finally I rounded the square root to 1 decimal place as per the expected result.  
 
 References:  
 
@@ -300,7 +301,7 @@ For the Looking ahead topic in week 8, the task was to write a program called pl
     g(x)=x2  
     h(x)=x3
 
-* Output is to display and save the plot    
+* Output is to display and save the plot on one set of axes   
 
 Code:   
 
@@ -328,7 +329,7 @@ Researched how-to-use-numpy-arange on real python to understand how to pass in a
 Each of the following pass in the range [0,4]   
     x = np.array([0,1,2,3,4])   
     x = np.arange(5, dtype=int)   
-    x = np.arange(0,5) # returns 0,1,2,3,4  
+    x = np.arange(0,5)
 
 Inserted functions as outlined in the task requirements, using **2 for squared (4 x 4) and using **3 for cubed (4 x 4 x 4).  
 Plotted f, g & h functions separately but on the same axis. 
@@ -339,7 +340,9 @@ Applied the following formats after researching on mayplotlib.org
 3. Added legend (passing the names in as a list)  
 4. Added Grid effect  
 
-The final setep was to save the plot as a png file (Weekly_Task_Plot.png) and also get the program to display the output.   
+The final step was to save the plot as a png file (Weekly_Task_Plot.png) and also get the program to display the output.   
+
+![](Weekly_Task_Plot.png)
 
 References:  
 
